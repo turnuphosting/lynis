@@ -1,6 +1,67 @@
 # Lynis Changelog
 
-## Lynis 3.1.0 (not released yet)
+## Lynis 3.1.2 (2024-09-26)
+
+### Added
+- Detection of ALT Linux
+- Detection of Athena OS
+- Detection of Container-Optimized OS from Google
+- Detection of Koozali SME Server
+- Detection of Nobara Linux
+- Detection of Open Source Media Center (OSMC)
+- Detection of PostmarketOS
+- CRYP-7932 - macOS FileVault encryption test
+- FILE-6398 - Check if JBD (Journal Block Device) driver is loaded
+- FINT-4344 - Wazuh system running state
+- PKGS-7305 - Query macOS Apps in /Applications and CoreServices
+- File added: .editorconfig, which is used by editors to standardize formatting
+
+### Changed
+- Correction of software EOL database and inclusion of AIX entries
+- Support sysctl value perf_event_paranoid -> 2|3
+- Update of translations: German, Portuguest, Turkish
+- Grammar and spell improvements
+- Improved package detection on Alpine Linux
+- Slackware support to check installed packges (functionPackageIsInstalled())
+- Added words prosecute/report to LEGAL_BANNER_STRINGS
+- Busybox support: Replace newer tr command syntax with older ascii specific operations
+- Added Wazuh as a malware scanner/antivirus and rootkit detection tool
+- Updated PHP versions and removed PHP 5 (deprecated)
+- AUTH-9262 - Corrected message with advised PAM libary (libpam-passwdqc)
+- CONT-8104 - Checking for errors, not only warning in docker info output
+- DBS-1826 - PostgreSQL detection improved for AlmaLinux, Rocky Linux, and FreeBSD
+- FILE-6344 - Test kernel version (major/minor)
+- INSE-8000 - Added inetd package and service name used in ubuntu 24.04
+- KRNL-5622 - Use systemctl get-default instead of following link
+- KRNL-5820 - Accept ulimit with -H parameter also
+- LOGG-2144 - Check for wazuh-agent presence on Linux systems
+- MACF-6234 - Test if semanage binary is available
+- MALW-3200 - ESET Endpoint Antivirus added
+- MALW-3280 - McAfee Antivirus for Linux deprecated
+- MALW-3291 - Check if Microsoft Defender Antivirus is installe
+- NETW-3200 - Added regex to allow both /bin/true as /bin/false
+- PKGS-7303 - Added version numbers to brew packages
+- PKGS-7370 - Cron job check for debsums improved
+- PKGS-7392 - Improved filtering of apt-check output (Ubuntu 24.04 may give an error)
+- PKGS-7410 - Added kernel name for Hardkernel odroid XU4
+
+---------------------------------------------------------------------------------
+
+## Lynis 3.1.1 (2024-03-17)
+
+### Added
+- Detection of ArcoLinux
+
+### Changed
+- DBS-1882 - Redis configuration file path added for FreeBSD (/usr/local/etc/redis.conf)
+- DBS-1882 - Check /snap directory location for Redis configuration file
+
+---------------------------------------------------------------------------------
+
+## Lynis 3.1.0 (2024-03-11)
+
+### Added
+- Translation: Indonesian
 
 ### Changed
 - MALW-3280 - Correction to detect com.avast.daemon
@@ -9,6 +70,7 @@
 - STATUS_NOT_ACTIVE variable added to translation files
 - End-of-life dates updated
 - Fixing missing or erroneous test number comments
+- Detection of SentinelOne corrected
 - Wazuh for file integrity and tooling
 - Updated parsing output of arch-audit
 - Added support for SentinelOne detection
